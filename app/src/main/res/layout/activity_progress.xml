@@ -275,7 +275,7 @@
             android:src="@drawable/home"
             android:layout_toStartOf="@+id/therapy"
             android:layout_marginEnd="25dp"
-
+            android:contentDescription="@string/home_icon"
             android:onClick="toHome"
             />
 
@@ -286,7 +286,7 @@
             android:src="@drawable/therapy"
             android:layout_toStartOf="@+id/progress"
             android:layout_marginEnd="16dp"
-
+            android:contentDescription="@string/progress_icon"
             android:onClick="toGMI"
             />
 
@@ -305,7 +305,7 @@
             android:src="@drawable/profile"
             android:layout_toEndOf="@+id/progress"
             android:layout_marginStart="22dp"
-
+            android:contentDescription="@string/profile_icon"
             android:onClick="toProfile"
             />
 
@@ -316,7 +316,7 @@
             android:src="@drawable/settings"
             android:layout_toEndOf="@+id/profile"
             android:layout_marginStart="24dp"
-
+            android:contentDescription="@string/setting_icon"
             android:onClick="toSettings"
             />
 

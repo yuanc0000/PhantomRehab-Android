@@ -176,5 +176,9 @@ Recognise App: https://www.noigroup.com/product/recogniseapp/
     <string name="update">Update</string>
     <string name="enter_cell_number">Enter cell number</string>
     <string name="reset_password">Reset Password</string>
-
+<!--    newly added-->
+    <string name="home_icon">Home Icon</string>
+    <string name="setting_icon">Setting Icon</string>
+    <string name="progress_icon">Progress Icon</string>
+    <string name="profile_icon">Profile Icon</string>
 </resources>
