@@ -1,319 +1,325 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:fillViewport="true">
+    android:layout_width="match_parent">
 
-    <RelativeLayout
+    <ScrollView
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/navbar"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-
-            android:background="@color/blue_theme"
-            android:fontFamily="@font/raleway_semibold"
-
-            android:gravity="center"
-            android:text="@string/app_name"
-            android:textColor="@color/black"
-            android:textSize="27sp" />
-
-        <TextView
-            android:id="@+id/title_progress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@+id/navbar"
-            android:layout_marginTop="34dp"
-            android:layout_marginBottom="34dp"
-            android:layout_centerHorizontal="true"
-
-            android:fontFamily="@font/raleway_semibold"
-            android:text="@string/my_progress"
-
-            android:textColor="@color/black"
-            android:textSize="27sp" />
-
-        <TextView
-            android:id="@+id/lat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@+id/title_progress"
-            android:layout_marginBottom="20dp"
-            android:layout_centerHorizontal="true"
-
-            android:fontFamily="@font/raleway_semibold"
-            android:text="@string/laterality_training"
-
-            android:textColor="@color/black"
-            android:textSize="22sp" />
-
-        <TextView
-            android:id="@+id/lat_insn"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lat"
-            android:layout_centerHorizontal="true"
-
-            android:text="@string/laterality_prog"
-            android:textSize="20sp"
-            />
-
-        <RelativeLayout
-            android:id="@+id/lat_combo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/lat_insn"
-            android:layout_centerHorizontal="true"
-            >
-
-            <ProgressBar
-                android:id="@+id/pb_lat"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-
-                android:indeterminateOnly="false"
-                android:progressDrawable="@drawable/circle"
-
-                tools:progress="60"
-                />
-
-            <TextView
-                android:id="@+id/pb_lat_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-
-                android:fontFamily="@font/raleway"
-                android:textSize="22sp"
-
-                tools:text="60%" />
-
-        </RelativeLayout>
-
-
-        <TextView
-            android:id="@+id/mot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@+id/lat_combo"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="20dp"
-            android:layout_centerHorizontal="true"
-
-            android:fontFamily="@font/raleway_semibold"
-            android:text="@string/motor_imagery"
-
-            android:textColor="@color/black"
-            android:textSize="22sp" />
-
-        <TextView
-            android:id="@+id/mot_insn"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/mot"
-            android:layout_centerHorizontal="true"
-
-            android:text="@string/intermed_prog"
-            android:textSize="20sp"
-            />
-
-        <RelativeLayout
-            android:id="@+id/mot_combo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/mot_insn"
-            android:layout_centerHorizontal="true"
-            >
-
-            <ProgressBar
-                android:id="@+id/pb_mot"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-
-                android:indeterminateOnly="false"
-                android:progressDrawable="@drawable/circle"
-
-                tools:progress="60"
-                />
-
-            <TextView
-                android:id="@+id/mot_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-
-                android:fontFamily="@font/raleway"
-                android:textSize="22sp"
-
-                tools:text="60%" />
-
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/mir"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_below="@+id/mot_combo"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="20dp"
-            android:layout_centerHorizontal="true"
-
-            android:fontFamily="@font/raleway_semibold"
-            android:text="@string/mirror_therapy"
-
-            android:textColor="@color/black"
-            android:textSize="22sp" />
-
-        <TextView
-            android:id="@+id/mir_insn"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/mir"
-            android:layout_centerHorizontal="true"
-
-            android:text="@string/mirror_prog"
-            android:textSize="20sp"
-            />
-
-        <RelativeLayout
-            android:id="@+id/mir_combo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/mir_insn"
-            android:layout_centerHorizontal="true"
-
-            android:layout_marginBottom="100dp"
-            >
-
-            <ProgressBar
-                android:id="@+id/pb_mir"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-
-                android:indeterminateOnly="false"
-                android:progressDrawable="@drawable/circle"
-
-                tools:progress="60"
-                />
-
-            <TextView
-                android:id="@+id/mir_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-
-                android:fontFamily="@font/raleway"
-                android:textSize="22sp"
-
-                tools:text="60%" />
-
-        </RelativeLayout>
+        android:layout_above="@+id/tabbar"
+        android:fillViewport="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/navbar"
-            android:layout_marginTop="40dp"
-            >
+            xmlns:tools="http://schemas.android.com/tools"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/volume"
+            <TextView
+                android:id="@+id/navbar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+
+                android:background="@color/blue_theme"
+                android:fontFamily="@font/raleway_semibold"
+
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="27sp" />
+
+            <TextView
+                android:id="@+id/title_progress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/volume_float_mute"
 
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="20dp"
-                android:visibility="invisible"
-                />
-
-            <ImageView
-                android:id="@+id/mute"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/volume_float"
-
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="20dp"
-                />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/tabbar"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:gravity="center_vertical"
-            android:background="@color/grey_secondary"
-            android:layout_alignParentBottom="true" >
-
-            <ImageView
-                android:id="@+id/home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/home"
-                android:layout_toStartOf="@+id/therapy"
-                android:layout_marginEnd="25dp"
-
-                android:onClick="toHome"
-                />
-
-            <ImageView
-                android:id="@+id/therapy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/therapy"
-                android:layout_toStartOf="@+id/progress"
-                android:layout_marginEnd="16dp"
-
-                android:onClick="toGMI"
-                />
-
-            <ImageView
-                android:id="@+id/progress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/process_fill"
+                android:layout_below="@+id/navbar"
+                android:layout_marginTop="34dp"
+                android:layout_marginBottom="34dp"
                 android:layout_centerHorizontal="true"
-                />
 
-            <ImageView
-                android:id="@+id/profile"
+                android:fontFamily="@font/raleway_semibold"
+                android:text="@string/my_progress"
+
+                android:textColor="@color/black"
+                android:textSize="27sp" />
+
+            <TextView
+                android:id="@+id/lat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/profile"
-                android:layout_toEndOf="@+id/progress"
-                android:layout_marginStart="22dp"
 
-                android:onClick="toProfile"
+                android:layout_below="@+id/title_progress"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+
+                android:fontFamily="@font/raleway_semibold"
+                android:text="@string/laterality_training"
+
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/lat_insn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lat"
+                android:layout_centerHorizontal="true"
+
+                android:text="@string/laterality_prog"
+                android:textSize="20sp"
                 />
 
-            <ImageView
-                android:id="@+id/setting"
+            <RelativeLayout
+                android:id="@+id/lat_combo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/settings"
-                android:layout_toEndOf="@+id/profile"
-                android:layout_marginStart="24dp"
+                android:layout_below="@id/lat_insn"
+                android:layout_centerHorizontal="true"
+                >
 
-                android:onClick="toSettings"
+                <ProgressBar
+                    android:id="@+id/pb_lat"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+
+                    android:indeterminateOnly="false"
+                    android:progressDrawable="@drawable/circle"
+
+                    tools:progress="60"
+                    />
+
+                <TextView
+                    android:id="@+id/pb_lat_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+
+                    android:fontFamily="@font/raleway"
+                    android:textSize="22sp"
+
+                    tools:text="60%" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/mot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/lat_combo"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+
+                android:fontFamily="@font/raleway_semibold"
+                android:text="@string/motor_imagery"
+
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/mot_insn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mot"
+                android:layout_centerHorizontal="true"
+
+                android:text="@string/intermed_prog"
+                android:textSize="20sp"
                 />
+
+            <RelativeLayout
+                android:id="@+id/mot_combo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mot_insn"
+                android:layout_centerHorizontal="true"
+                >
+
+                <ProgressBar
+                    android:id="@+id/pb_mot"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+
+                    android:indeterminateOnly="false"
+                    android:progressDrawable="@drawable/circle"
+
+                    tools:progress="60"
+                    />
+
+                <TextView
+                    android:id="@+id/mot_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+
+                    android:fontFamily="@font/raleway"
+                    android:textSize="22sp"
+
+                    tools:text="60%" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/mir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/mot_combo"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+
+                android:fontFamily="@font/raleway_semibold"
+                android:text="@string/mirror_therapy"
+
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/mir_insn"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mir"
+                android:layout_centerHorizontal="true"
+
+                android:text="@string/mirror_prog"
+                android:textSize="20sp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/mir_combo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mir_insn"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginBottom="100dp"
+                >
+
+                <ProgressBar
+                    android:id="@+id/pb_mir"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+
+                    android:indeterminateOnly="false"
+                    android:progressDrawable="@drawable/circle"
+
+                    tools:progress="60"
+                    />
+
+                <TextView
+                    android:id="@+id/mir_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+
+                    android:fontFamily="@font/raleway"
+                    android:textSize="22sp"
+
+                    tools:text="60%" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/navbar"
+                android:layout_marginTop="40dp"
+                >
+
+                <ImageView
+                    android:id="@+id/volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/volume_float_mute"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:visibility="invisible"
+                    />
+
+                <ImageView
+                    android:id="@+id/mute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/volume_float"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    />
+
+            </RelativeLayout>
+
 
         </RelativeLayout>
 
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/tabbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:background="@color/grey_secondary"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home"
+            android:layout_toStartOf="@+id/therapy"
+            android:layout_marginEnd="25dp"
+
+            android:onClick="toHome"
+            />
+
+        <ImageView
+            android:id="@+id/therapy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/therapy"
+            android:layout_toStartOf="@+id/progress"
+            android:layout_marginEnd="16dp"
+
+            android:onClick="toGMI"
+            />
+
+        <ImageView
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/process_fill"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile"
+            android:layout_toEndOf="@+id/progress"
+            android:layout_marginStart="22dp"
+
+            android:onClick="toProfile"
+            />
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/settings"
+            android:layout_toEndOf="@+id/profile"
+            android:layout_marginStart="24dp"
+
+            android:onClick="toSettings"
+            />
 
     </RelativeLayout>
 
-</ScrollView>
+</RelativeLayout>
