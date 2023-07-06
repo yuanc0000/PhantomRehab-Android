@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+
+            android:background="@color/blue_theme"
+            android:fontFamily="@font/raleway_semibold"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="27sp" />
+
+        <RelativeLayout
+            android:id="@+id/infobar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/navbar"
+
+            android:background="@color/grey_secondary"
+            >
+
+            <TextView
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/raleway_semibold"
+                android:text="@string/start_stopwatch_intermed"
+
+                android:textColor="@color/blue_function"
+                android:textSize="20sp"
+                />
+
+            <Chronometer
+                android:id="@+id/chronometer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/blue_function"
+
+                android:paddingStart="30dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible"
+                />
+
+            <ImageView
+                android:id="@+id/stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_toStartOf="@+id/pause"
+                android:layout_marginEnd="20dp"
+
+                android:src="@drawable/stop_fill"
+                android:visibility="invisible"
+                />
+
+            <ImageView
+                android:id="@+id/pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+
+                android:src="@drawable/pause_fill"
+                android:visibility="invisible"
+                />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/save_progress"
+            android:layout_width="180dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+
+            android:padding="0sp"
+            android:background="@drawable/bg_button"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="@string/save_my_progress"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:letterSpacing="0.1"
+
+            app:backgroundTint="@color/blue_theme"
+            app:cornerRadius="35dp"
+
+            android:onClick="saveProgress"
+            />
+
+        <TextView
+            android:id="@+id/prompt_setup"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/raleway"
+            android:text="@string/promt_setup"
+
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/insn"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="35dp"
+
+            android:fontFamily="@font/raleway"
+            android:text="@string/insn"
+
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="230dp"
+            android:layout_height="59dp"
+            android:layout_gravity="center"
+
+            android:background="@drawable/bg_input"
+            android:fontFamily="@font/raleway"
+
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+
+            android:textSize="24sp"
+            app:backgroundTint="@color/blue_theme"
+            app:cornerRadius="35dp"
+            />
+
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="230dp"
+            android:layout_height="59dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+
+            android:background="@drawable/bg_input"
+            android:fontFamily="@font/raleway"
+
+            android:text="@string/done"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+
+            android:textSize="24sp"
+            app:backgroundTint="@color/grey_secondary"
+            app:cornerRadius="35dp"
+
+            android:onClick="done"
+            />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/btn_return"-->
+        <!--            android:layout_width="230dp"-->
+        <!--            android:layout_height="59dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginTop="22dp"-->
+        <!--            android:layout_marginBottom="37dp"-->
+
+        <!--            android:background="@drawable/bg_button"-->
+        <!--            android:fontFamily="@font/raleway_semibold"-->
+
+        <!--            android:text="@string/ret"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:textColor="@color/black"-->
+
+        <!--            android:textSize="24sp"-->
+        <!--            app:backgroundTint="@color/blue_theme"-->
+        <!--            app:cornerRadius="35dp"-->
+        <!--            android:onClick="ret"/>-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="35dp">
+
+            <ImageView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/info_circle"
+
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="70dp"
+
+                android:onClick="toInfo"
+                />
+
+            <ImageView
+                android:id="@+id/volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/volume_mute"
+
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:visibility="invisible"
+                />
+
+            <ImageView
+                android:id="@+id/mute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/volume_up"
+
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

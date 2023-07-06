@@ -1,0 +1,180 @@
+<resources>
+    <string name="app_name">PhantomRehab</string>
+    <string name="sign_in">Sign In</string>
+    <string name="enter_username">Enter username</string>
+    <string name="enter_password">Enter password</string>
+    <string name="login">Login</string>
+    <string name="forget_pw"><u>Forget my password</u></string>
+    <string name="sign_up_underline"><u>Sign up</u></string>
+    <string name="create_account">Create Account</string>
+    <string name="enter_email">Enter email</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="ret">Return</string>
+    <string name="beginner">Beginner</string>
+    <string name="intermediate">Intermediate</string>
+    <string name="hard">Hard</string>
+    <string name="login_error">Invalid administrator username or password</string>
+    <string name="level_1">Level 1</string>
+    <string name="random_hand">This is a random hand image</string>
+    <string name="left">L</string>
+    <string name="right">R</string>
+    <string name="next">Next</string>
+    <string name="promt_setup">Please set up your device as instructed.</string>
+    <string name="insn"><b>Instructions</b> \n \n
+        \u2022 Place your device vertically against a wall or other stable surface. \n
+        \u2022 When you click on “Begin,” the camera will open. Please <u>grant this app permission</u> to access the camera. \n
+\u2022 When the camera opens, make sure you can see the non-affected body part entirely, and make sure the affected body part is fully covered and out of view. \n
+        \u2022 Complete <b>at least 20 minutes</b> of mirror imagery a day, <b>every day</b>, until you no longer have any symptoms. \n
+\u2022 Start with simple and basic movements before progressing towards more complex and functional movements, as symptoms allow. \n
+        \u2022 After you finish each days training, return to this app and <b>click on “Done.”</b> Your training will be recorded.
+    </string>
+    <string name="cancel"><u>Cancel</u></string>
+    <string name="log_out">Sign out</string>
+    <string name="meditation">Meditation</string>
+    <string name="gmi">GMI</string>
+    <string name="my_progress">Progress</string>
+    <string name="my_profile">Profile</string>
+    <string name="finish_msg">Congratulations! You\'ve finished.</string>
+    <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="color">Color</string>
+    <string name="text_size">Text size</string>
+    <string name="reminder">Reminder</string>
+    <string name="english">English</string>
+    <string name="espa_ol">Español</string>
+    <string name="twice_a_day">Twice a day</string>
+    <string name="none">None</string>
+    <string name="once_a_day">Once a day</string>
+    <string name="once_a_week">Once a week</string>
+    <string name="frequency">Frequency</string>
+    <string name="info_section">Info Section</string>
+    <string name="laterality_reconstruction">Laterality Reconstruction</string>
+    <string name="lr_content">
+  Laterality reconstruction is the first step in GMI training. This practice requires you to identify between left and right sides of the body, effectively calibrating your brain maps sense of direction and orientation.By practicing this technique, your brain uses its movement planning areas to start normalizing messages between your brain and body.
+    </string>
+    <string name="graded_motor_imaging">Graded Motor Imaging</string>
+    <string name="gmi_info">
+Mirror Therapy is the final step in GMI training. In this level, the user employs the camera on their phone to act as a mirror, reflecting the unaffected limb in a way that makes the user feel that it’s really the affected limb. Voluntary movements and various sensations are introduced to the non-affected body part, making it appear that these things are happening to both limbs. This stage utilizes cells in the brain known as mirror neurons which allow us to essentially trick our brain into thinking the projected image is really our own.
+    </string>
+    <string name="done"><b>Done</b></string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="set_reminder">Confirm</string>
+    <string name="laterality_training">Laterality Training</string>
+    <string name="laterality_hint">You are recommended to do this training 5 times a day, 5 minutes per time. Set reminders for yourself here :D</string>
+    <string name="select_time">Select time</string>
+    <string name="motor_hint">You are recommended to do this training every day, up to 2 hours. Set a daily reminder here.</string>
+    <string name="motor_imagery">Motor Imagery</string>
+    <string name="mirror_hint">You are recommended to do this training every day, no maximum time limit. Set a daily reminder here.</string>
+    <string name="mirror_therapy">Mirror Therapy</string>
+    <string name="faqs">FAQs</string>
+    <string name="home">Home</string>
+    <string name="therapy">Therapy</string>
+    <string name="no_1">No. 1</string>
+
+    <string name="laterality_intro">In this part, you will: \n \n
+            \u2022 Differentiate between “L” (“Left”) and “R” (“Right”) in under <b>2 seconds</b>. \n \n
+        \u2022 Score at least <b>90%</b> for response time AND accuracy <b>for a week</b> to advance to the next level.</string>
+
+    <string name="laterality_prog">Score at least 90% for response time AND accuracy for a week to advance to the next level.</string>
+
+    <string name="intermed_video_prompt">In this part, you will … \n \n
+        \u2022 Watch videos and do guided-training <b>every day, up to 2 hours.</b> You can do this training in more than one sitting. \n \n
+        \u2022 Each time before you begin the training, remember to <b><u>start the stopwatch</u></b> to record your progress. \n \n
+        \u2022 Remember to click on <b><u>"Save my progress"</u></b> when you plan to leave. \n \n
+        \u2022 <u>Please do not click on the button when you are still in the middle of a training session, and only click on the button once when saving your progress,
+            or there might be an error in calculating your total progress.</u>
+    </string>
+
+    <string name="intermed_prog">Do guided-training every day and up to 2 hours for 14 days.</string>
+
+    <string name="mirror_prog">Do this training every day and for 20 minutes at least. </string>
+
+    <string name="prog_text">%1$d Percent</string>
+    <string name="mot_prog_text">%1$d Percent</string>
+    <string name="mir_prog_text">%1$d Percent</string>
+
+
+    <string name="begin">Begin</string>
+    <string name="score">Score: %1$d</string>
+    <string name="time">Time: %1$s</string>
+    <string name="score_placeholder">Score: ?</string>
+    <string name="time_placeholder">Time: ?</string>
+
+    <string name="start_stopwatch">Press "L" or "R" to begin!</string>
+    <string name="start_stopwatch_intermed">Press here to start the stopwatch</string>
+
+    <string name="hide_stopwatch">Keep working!</string>
+    <string name="resume_stopwatch">Press to resume the stopwatch</string>
+    <string name="resume">Resume</string>
+    <string name="save_my_progress">Save my progress</string>
+    <string name="verification_prompt">Please enter the following information to verify your identity.</string>
+    <string name="verify">Verify</string>
+
+    <string name="faq_q1">Q: What is the purpose and benefit of using our app?</string>
+    <string name="faq_q2">Q: What functionalities does the app entail?</string>
+    <string name="faq_q3">Q: How often should the user complete the exercises?</string>
+    <string name="faq_q4">Q: In what sequence should the user complete the exercises?</string>
+    <string name="faq_q5">Q: Where can I get more information?</string>
+
+    <string name="faq_a1">
+A: This app provides users with easy-to-follow instructions on how to use a technique called Graded Motor Imagery. Graded Motor Imagery is a 3-step process that uses evidence-based research to prime the central nervous system for maximal neuroplasticity, allowing the user to effectively rewire their brain to reduce their unwanted symptoms.\n\n
+
+The first step in the process is Laterality. This requires the user to identify between a L and a R body part while being timed for efficiency and accuracy. \n\n
+
+Once this level is mastered, the user can proceed to the next step: Imagined Movements. In this stage, the user is prompted to imagine themselves moving the affected body part in a pain-free way. The movements will start out simple and get progressively more complex as the user is ready to progress. If the user has mastered laterality but finds imagined movements to be painful or symptomatic, there are videos of others doing these movements that can be watched until the user is able to imagine themselves moving without issue. \n\n
+
+Once the Imagined Movements level has been mastered, the user progresses to the final stage of GMI: Mirror Therapy. In this level, the user employs the camera on their phone to act as a mirror, reflecting the unaffected limb in a way that makes the user feel that it is really the affected limb. This stage utilizes cells in the brain known as mirror neurons which allow us to essentially trick our brain into thinking the projected image is really our own. Voluntary movements and various sensations are introduced to the non-affected body part, making it appear that these things are happening to both limbs. Once this final level is mastered, the user should be able to move their body in any way they want without experiencing any of their previous symptoms.\n\n
+
+Remember, these techniques should be completed with guidance and supervision of a healthcare professional.
+    </string>
+    <string name="faq_a2">
+A: The app can be downloaded by users to aid in proper completion of their sensorimotor exercises as prescribed by their healthcare provider. It follows the principles of Graded Motor Imagery which is an evidence-based technique to create neuroplastic changes in the brain to address chronic centralized  pain, phantom limb syndrome, and Chronic Regional Pain Syndrome. \n\n
+
+It will provide a timer; interactive Q&amp;A for quizzing the user; short clips of body movements for watching; guided prompts for imagining scenarios; body-positive affirmations; body scans; and meditations. This app tracks progress, sends notifications, and is gamified for increased compliance
+    </string>
+    <string name="faq_a3">
+A: This answer depends on what level the user is on and how severe their symptoms are. \n\n
+For Laterality, the app should be used at least 5 times a day for at least 5 minutes at a time. \n\n
+For Motor Imagery, the app should be used for 2 hours a day for at least 2 weeks. \n\n
+Finally, the Mirror Therapy should be completed every day for at least 20 minutes until the user is symptom-free. \n\n
+This app also contains a reminder feature that can be activated and follows the above guidelines for the user’s convenience.
+    </string>
+    <string name="faq_a4">
+A: The user should proceed in order from Laterality Training to Imagined Movements to Mirror Therapy.
+    </string>
+    <string name="faq_a5">
+A: Here are some links that will take you to websites with articles, blogs, and other information on chronic pain, neuroplasticity, and the efficacy of GMI. \n \n
+http://www.gradedmotorimagery.com \n\n
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3141540 \n\n
+https://www.mayoclinic.org/diseases-conditions/phantom-pain/symptoms-causes/syc-20376272 \n\n
+https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Complex-Regional-Pain-Syndrome-Fact-Sheet \n\n
+https://www.theacpa.org \n\n
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1820749 \n\n
+Orientate App: https://apps.apple.com/us/app/orientate-pain-management/id479540062; https://play.google.com/store/apps/details?id=com.reflexpainmanagement.orientatefree&amp;hl=en_GB&amp;gl=US \n\n
+Recognise App: https://www.noigroup.com/product/recogniseapp/
+
+    </string>
+
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+
+    <string name="summary">Summary</string>
+    <string name="you_ve_passed">You\'ve passed!</string>
+    <string name="day_count">%1$d days to go</string>
+    <string name="avg_time">Average response time: %1$d s</string>
+    <string name="accuracy">Accuracy: %1$d percent</string>
+    <string name="msg_fail">Good job! Keep working to reach the goal.</string>
+
+    <string name="change_or_forget_pw">
+        <u>Change password? \n
+            Forget password?</u>
+    </string>
+    <string name="current_password">Current Password</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="confirm_new_password">Confirm new password</string>
+    <string name="update">Update</string>
+    <string name="enter_cell_number">Enter cell number</string>
+    <string name="reset_password">Reset Password</string>
+
+</resources>

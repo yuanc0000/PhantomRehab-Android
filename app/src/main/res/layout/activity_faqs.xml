@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+
+            android:background="@color/blue_theme"
+            android:fontFamily="@font/raleway_semibold"
+
+            android:gravity="center"
+            android:text="@string/faqs"
+            android:textColor="@color/black"
+            android:textSize="27sp" />
+
+
+        <RelativeLayout
+            android:id="@+id/faq1_expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/navbar"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/q1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:background="@color/white"
+                android:fontFamily="@font/raleway_semibold"
+
+                android:gravity="center_vertical"
+
+                android:text="@string/faq_q1"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/down1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret_down"
+
+                android:layout_toEndOf="@+id/q1"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                />
+
+            <TextView
+
+                android:visibility="gone"
+
+                android:id="@+id/f1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/q1"
+
+                android:background="@color/white"
+                android:fontFamily="@font/raleway"
+
+                android:layout_marginBottom="20dp"
+                android:text="@string/faq_a1"
+
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+
+                android:visibility="gone"
+
+                android:id="@+id/up1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret_up"
+
+                android:layout_toEndOf="@+id/f1"
+                android:layout_below="@+id/f1"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-25dp"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/faq2_expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/faq1_expand"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/q2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:background="@color/white"
+                android:fontFamily="@font/raleway_semibold"
+
+                android:gravity="center_vertical"
+
+                android:text="@string/faq_q2"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/down2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret_down"
+
+                android:layout_toEndOf="@+id/q2"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                />
+
+            <TextView
+
+                android:visibility="gone"
+
+                android:id="@+id/f2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/q2"
+
+                android:background="@color/white"
+                android:fontFamily="@font/raleway"
+
+                android:layout_marginBottom="20dp"
+                android:text="@string/faq_a2"
+
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+
+                android:visibility="gone"
+
+                android:id="@+id/up2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret_up"
+
+                android:layout_toEndOf="@+id/f2"
+                android:layout_below="@+id/f2"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-25dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/faq3_expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/faq2_expand"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/q3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:background="@color/white"
+                android:fontFamily="@font/raleway_semibold"
+
+                android:gravity="center_vertical"
+
+                android:text="@string/faq_q3"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/down3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret_down"
+
+                android:layout_toEndOf="@+id/q3"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                />
+
+            <TextView
+
+                android:visibility="gone"
+
+                android:id="@+id/f3"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/q3"
+
+                android:background="@color/white"
+                android:fontFamily="@font/raleway"
+
+                android:layout_marginBottom="20dp"
+                android:text="@string/faq_a3"
+
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+
+                android:visibility="gone"
+
+                android:id="@+id/up3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret_up"
+
+                android:layout_toEndOf="@+id/f3"
+                android:layout_below="@+id/f3"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-25dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/faq4_expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/faq3_expand"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/q4"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:background="@color/white"
+                android:fontFamily="@font/raleway_semibold"
+
+                android:gravity="center_vertical"
+
+                android:text="@string/faq_q4"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/down4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret_down"
+
+                android:layout_toEndOf="@+id/q4"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                />
+
+            <TextView
+
+                android:visibility="gone"
+
+                android:id="@+id/f4"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/q4"
+
+                android:background="@color/white"
+                android:fontFamily="@font/raleway"
+
+                android:layout_marginBottom="20dp"
+                android:text="@string/faq_a4"
+
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+
+                android:visibility="gone"
+
+                android:id="@+id/up4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret_up"
+
+                android:layout_toEndOf="@+id/f4"
+                android:layout_below="@+id/f4"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-25dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/faq5_expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/faq4_expand"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/q5"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+
+                android:background="@color/white"
+                android:fontFamily="@font/raleway_semibold"
+
+                android:gravity="center_vertical"
+
+                android:text="@string/faq_q5"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/down5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret_down"
+
+                android:layout_toEndOf="@+id/q5"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                />
+
+            <TextView
+
+                android:visibility="gone"
+                android:autoLink="web"
+                android:textColorLink="@color/blue_theme"
+
+                android:id="@+id/f5"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/q5"
+
+                android:background="@color/white"
+                android:fontFamily="@font/raleway"
+
+                android:layout_marginBottom="20dp"
+                android:text="@string/faq_a5"
+
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+
+                android:visibility="gone"
+
+                android:id="@+id/up5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caret_up"
+
+                android:layout_toEndOf="@+id/f5"
+                android:layout_below="@+id/f5"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-25dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/faq5_expand"
+            android:layout_marginBottom="50dp"
+            >
+
+            <ImageView
+                android:id="@+id/volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/volume_float_mute"
+
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:visibility="invisible"
+                />
+
+            <ImageView
+                android:id="@+id/mute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/volume_float"
+
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                />
+
+        </RelativeLayout>
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/tabbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:background="@color/grey_secondary"-->
+<!--            android:layout_alignParentBottom="true" >-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/home"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/home_fill"-->
+<!--                android:layout_toStartOf="@+id/therapy"-->
+<!--                android:layout_marginEnd="25dp"-->
+
+<!--                android:onClick="toHome"-->
+<!--                />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/therapy"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/therapy"-->
+<!--                android:layout_toStartOf="@+id/progress"-->
+<!--                android:layout_marginEnd="16dp"-->
+
+<!--                android:onClick="toGMI"-->
+<!--                />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/progress"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/process"-->
+<!--                android:layout_centerHorizontal="true"-->
+
+<!--                android:onClick="toProgress"-->
+<!--                />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/profile"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/profile"-->
+<!--                android:layout_toEndOf="@+id/progress"-->
+<!--                android:layout_marginStart="22dp"-->
+
+<!--                android:onClick="toProfile"-->
+<!--                />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/setting"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/settings"-->
+<!--                android:layout_toEndOf="@+id/profile"-->
+<!--                android:layout_marginStart="24dp"-->
+
+<!--                android:onClick="toSettings"-->
+<!--                />-->
+
+<!--        </RelativeLayout>-->
+
+    </RelativeLayout>
+
+</ScrollView>
+
