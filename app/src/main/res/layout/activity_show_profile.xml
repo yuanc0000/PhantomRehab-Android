@@ -37,6 +37,7 @@
 
     <RelativeLayout
         android:id="@+id/profile_info"
+        android:layout_above="@+id/tabbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title_profile"
@@ -131,8 +132,8 @@
 
         <Button
             android:id="@+id/edit"
-            android:layout_width="230dp"
-            android:layout_height="59dp"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/enter_pw"
 
