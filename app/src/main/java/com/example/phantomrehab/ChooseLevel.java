@@ -58,11 +58,11 @@ public class ChooseLevel extends AppCompatActivity implements View.OnClickListen
 
         //Add this part, so we can unlock without firebase
         // Make Intermed and Hard levels visible
-        IntermedLock.setVisibility(View.INVISIBLE);
-        Intermed.setVisibility(View.VISIBLE);
+        //IntermedLock.setVisibility(View.INVISIBLE);
+        //Intermed.setVisibility(View.VISIBLE);
 
-        HardLock.setVisibility(View.INVISIBLE);
-        Hard.setVisibility(View.VISIBLE);
+        //HardLock.setVisibility(View.INVISIBLE);
+        //Hard.setVisibility(View.VISIBLE);
         /////////////////
 
         Beginner.setOnClickListener(this);
