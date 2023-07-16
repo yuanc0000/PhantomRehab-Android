@@ -421,8 +421,9 @@ public class BeginnerMain extends AppCompatActivity {
 
 //        Toast.makeText(getApplicationContext(),"day count:" + count,
 //                Toast.LENGTH_SHORT).show();
-
-        if (count >= 7){
+        //below for testing
+        //if (count >= 7)
+        if (count == 3){
 
             //load user root and database
             reff = FirebaseDatabase.getInstance().getReference().child("users").child(phone)
@@ -493,7 +494,7 @@ public class BeginnerMain extends AppCompatActivity {
 
                 //if pass and training_counter==5  -> day_counter += 1
                 //if (POF == 1 && training_counter[0] == 5)
-                if (POF == 1 && training_counter[0] >= 5 && !passToday[0]) {
+                if (POF == 1 && training_counter[0] >= 3 && !passToday[0]) {
                     passToday[0]=true;
                     //System.out.println("now we, POF == 1 && training_counter[0] >= 5");
                     //System.out.println("old day_counter[0]: "+day_counter[0]);
@@ -532,8 +533,13 @@ public class BeginnerMain extends AppCompatActivity {
         //returns 1 if pass, 0 if fail
 
         int count = finalImageSet.length;
-        double time_thresh = count*1.8*1000; //unit: millisecond
-        double score_thresh = count*0.9;
+        //double time_thresh = count*1.8*1000; //unit: millisecond
+        //double score_thresh = count*0.9;
+
+        //below is for testing
+        double time_thresh = count*10*1000; //unit: millisecond
+        double score_thresh = count*0.4;
+
 
         boolean pass_time;
         boolean pass_score;
