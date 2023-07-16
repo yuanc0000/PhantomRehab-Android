@@ -387,7 +387,7 @@ public class BeginnerMain extends AppCompatActivity {
 
         //level control
         dayCounter();
-        nextLevel();
+        //nextLevel();
 
         //transition to finish page
         new Handler().postDelayed(new Runnable() {
@@ -474,6 +474,10 @@ public class BeginnerMain extends AppCompatActivity {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String today;
+                Calendar calendar = Calendar.getInstance();
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                today = dateFormat.format(calendar.getTime());
 
                 //check if the user has done training today
                 //training_counter = how many times has the user done training today
@@ -493,6 +497,7 @@ public class BeginnerMain extends AppCompatActivity {
                 if (POF == 1 && training_counter[0] == 5) {
                     day_counter[0] += 1;
                     saveDayCounter(day_counter[0]);
+                    nextLevel();
 
 //                    Toast.makeText(getApplicationContext(),"day count:" + day_counter[0],
 //                            Toast.LENGTH_SHORT).show();
