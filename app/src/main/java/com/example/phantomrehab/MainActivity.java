@@ -28,6 +28,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Map;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,11 +44,23 @@ public class MainActivity extends AppCompatActivity {
 
     private String UID;
 
+    // Set to 'true' when testing, 'false' when releasing
+    //private static final boolean CLEAR_PREFERENCES = true;
+
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Clear all SharedPreferences data
+//        if (CLEAR_PREFERENCES) {
+//            System.out.println("！！restart so clear all SharedPreferences" );
+//            SharedPreferences sharedPreferences = getSharedPreferences("DayCounter", MODE_PRIVATE);
+//            SharedPreferences.Editor editor = sharedPreferences.edit();
+//            editor.clear();
+//            editor.apply();
+//        }
 
         //color management
         TextView navbar = findViewById(R.id.navbar);
