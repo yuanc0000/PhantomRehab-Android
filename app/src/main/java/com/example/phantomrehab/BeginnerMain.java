@@ -464,9 +464,6 @@ public class BeginnerMain extends AppCompatActivity {
         final boolean[] new_day = new boolean[1];
         String today;
 
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        today = dateFormat.format(calendar.getTime());
 
         //load database
         reff = FirebaseDatabase.getInstance().getReference().child("users").child(phone);
