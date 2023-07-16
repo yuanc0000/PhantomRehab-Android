@@ -462,7 +462,7 @@ public class BeginnerMain extends AppCompatActivity {
         //initialize other variables
         final int[] training_counter = new int[1];
         final boolean[] new_day = new boolean[1];
-        String today;
+        final boolean[] passToday = new boolean[1];
 
 
         //load database
@@ -488,10 +488,15 @@ public class BeginnerMain extends AppCompatActivity {
                 else {
                     new_day[0] = true;
                     training_counter[0] = 1;
+                    passToday[0] =false;
                 }
 
                 //if pass and training_counter==5  -> day_counter += 1
-                if (POF == 1 && training_counter[0] == 5) {
+                //if (POF == 1 && training_counter[0] == 5)
+                if (POF == 1 && training_counter[0] >= 5 && !passToday[0]) {
+                    passToday[0]=true;
+                    //System.out.println("now we, POF == 1 && training_counter[0] >= 5");
+                    //System.out.println("old day_counter[0]: "+day_counter[0]);
                     day_counter[0] += 1;
                     saveDayCounter(day_counter[0]);
                     nextLevel();
