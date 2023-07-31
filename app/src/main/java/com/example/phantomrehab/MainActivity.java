@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 //        Cell = (EditText) findViewById(R.id.enter_phone);
         Password = (EditText) findViewById(R.id.enter_pw);
         SignUp = (TextView) findViewById(R.id.sign_up);
-//        ForgetPw = findViewById(R.id.forget_pw);
+        ForgetPw = findViewById(R.id.forget_pw);
 
         fAuth = FirebaseAuth.getInstance();
 
@@ -90,6 +90,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), SignupActivity.class));
             }
         });
+
+        ForgetPw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), PasswordResetActivity.class));
+            }
+        });
+
 
         //set up authentification
         Login.setOnClickListener(new View.OnClickListener() {
