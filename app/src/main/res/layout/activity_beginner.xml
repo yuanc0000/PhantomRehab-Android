@@ -30,11 +30,11 @@
         >
 
         <TextView
-            android:id="@+id/start"
+            android:id="@+id/start_therapy"
             android:layout_width="wrap_content"
             android:layout_height="55dp"
 
-            android:paddingStart="30dp"
+            android:paddingStart="60dp"
             android:gravity="center_vertical"
             android:fontFamily="@font/raleway_semibold"
             android:text="@string/start_stopwatch"
@@ -50,7 +50,7 @@
             android:textSize="20sp"
             android:textColor="@color/blue_function"
 
-            android:paddingStart="30dp"
+            android:paddingStart="60dp"
             android:layout_centerVertical="true"
             android:visibility="invisible"
             />
@@ -59,9 +59,9 @@
             android:id="@+id/hide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp"
 
             android:src="@drawable/eye"
             android:onClick="hideStopwatch"
@@ -71,99 +71,40 @@
             android:id="@+id/show"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp"
 
             android:src="@drawable/eye_slash"
             android:visibility="invisible"
             android:onClick="showStopwatch"
             />
 
-<!--        <ImageView-->
-<!--            android:id="@+id/stop"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_centerVertical="true"-->
+        <ImageView
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/pause"
+            android:layout_marginEnd="25dp"
+            android:src="@drawable/start_fill"
+            android:visibility="invisible"
+            />
 
-<!--            android:layout_toStartOf="@+id/pause"-->
-<!--            android:layout_marginEnd="20dp"-->
+        <ImageView
+            android:id="@+id/pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"
+            android:src="@drawable/pause_fill"
+            android:visibility="invisible"
 
-<!--            android:src="@drawable/stop_fill"-->
-<!--            android:visibility="invisible"-->
-<!--            />-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/pause"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_alignParentEnd="true"-->
-<!--            android:layout_centerVertical="true"-->
-<!--            android:layout_marginEnd="20dp"-->
-
-<!--            android:src="@drawable/pause_fill"-->
-<!--            android:visibility="invisible"-->
-<!--            />-->
+            />
 
     </RelativeLayout>
-
-<!--    <ImageView-->
-<!--        android:id="@+id/image"-->
-<!--        android:layout_width="300dp"-->
-<!--        android:layout_height="200dp"-->
-
-<!--        android:layout_below="@+id/stopwatch"-->
-<!--        android:layout_centerHorizontal="true"-->
-
-<!--        android:adjustViewBounds="true"-->
-<!--        android:scaleType="centerCrop"-->
-<!--        android:src="@drawable/back1"-->
-<!--        android:contentDescription="@string/random_hand"-->
-<!--        />-->
-
-<!--    <LinearLayout-->
-<!--        android:id="@+id/btn_select"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_above="@+id/tabbar"-->
-<!--        android:gravity="center_horizontal"-->
-<!--        >-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/btn_left"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="125dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:gravity="center"-->
-
-<!--            android:fontFamily="@font/raleway_semibold"-->
-<!--            android:textSize="60sp"-->
-
-<!--            android:text="@string/left"-->
-<!--            android:textAllCaps="false"-->
-<!--            android:textColor="@color/white"-->
-
-<!--            android:background="@color/blue_left_btn"-->
-<!--            />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/btn_right"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:layout_height="125dp"-->
-<!--            android:gravity="center"-->
-
-<!--            android:fontFamily="@font/raleway_semibold"-->
-<!--            android:textSize="60sp"-->
-
-<!--            android:text="@string/right"-->
-<!--            android:textAllCaps="false"-->
-<!--            android:textColor="@color/white"-->
-
-<!--            android:background="@color/blue_tertiary"-->
-<!--            />-->
-
-<!--    </LinearLayout>-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

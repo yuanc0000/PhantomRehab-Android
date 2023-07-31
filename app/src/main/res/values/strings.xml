@@ -105,7 +105,7 @@ Mirror Therapy is the final step in GMI training. In this level, the user employ
     <string name="start_stopwatch_intermed">Press here to start the stopwatch</string>
 
     <string name="hide_stopwatch">Keep working!</string>
-    <string name="resume_stopwatch">Press to resume the stopwatch</string>
+    <string name="resume_stopwatch">Press to continue</string>
     <string name="resume">Resume</string>
     <string name="save_my_progress">Save my progress</string>
     <string name="verification_prompt">Please enter the following information to verify your identity.</string>

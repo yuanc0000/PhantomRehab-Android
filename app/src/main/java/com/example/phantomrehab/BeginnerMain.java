@@ -1,5 +1,6 @@
 package com.example.phantomrehab;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.PorterDuff;
@@ -48,8 +49,9 @@ public class BeginnerMain extends AppCompatActivity {
     private String chrono_text;
     private boolean running;
     private long pauseOffset;
-    ImageView pause, stop, hide, show;
-    TextView start, show_time;
+    ImageView hide, show, pause, start;
+
+    TextView start_therapy, show_time;
 
     //display images
 
@@ -198,6 +200,7 @@ public class BeginnerMain extends AppCompatActivity {
 
     int pickedImage = 0;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -211,14 +214,20 @@ public class BeginnerMain extends AppCompatActivity {
             chronometer = findViewById(R.id.chronometer);
             chronometer.setTextColor(getColor());
 
-            start = findViewById(R.id.start);
-            start.setTextColor(getColor());
+            start_therapy = findViewById(R.id.start_therapy);
+            start_therapy.setTextColor(getColor());
 
             hide = findViewById(R.id.hide);
             hide.setColorFilter(getColor(), PorterDuff.Mode.SRC_IN);
 
             show = findViewById(R.id.show);
             show.setColorFilter(getColor(), PorterDuff.Mode.SRC_IN);
+
+            pause = findViewById(R.id.pause);
+            pause.setColorFilter(getColor(), PorterDuff.Mode.SRC_IN);
+
+            start = findViewById(R.id.start);
+            start.setColorFilter(getColor(), PorterDuff.Mode.SRC_IN);
 
             TextView left = findViewById(R.id.btn_left);
             TextView right = findViewById(R.id.btn_right);
@@ -270,13 +279,39 @@ public class BeginnerMain extends AppCompatActivity {
 //        stopwatchUI();
 
         chronometer = findViewById(R.id.chronometer);
-        start = findViewById(R.id.start);
+        start_therapy = findViewById(R.id.start_therapy);
+        start_therapy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startStopwatch();
+            }
+        });
+
 
         hide = findViewById(R.id.hide);
         show = findViewById(R.id.show);
 
         show_time = findViewById(R.id.show_time);
         show_time.setText("");
+
+        pause = findViewById(R.id.pause);
+
+        start = findViewById(R.id.start);
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startStopwatch();
+            }
+        });
+
+        pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pauseStopwatch();
+            }
+        });
+
+
 
         //display images
         //        r = new Random();
@@ -353,8 +388,8 @@ public class BeginnerMain extends AppCompatActivity {
             startStopwatch();
             if(!Show){
                 chronometer.setVisibility(View.INVISIBLE);
-                start.setVisibility(View.VISIBLE);
-                start.setText(R.string.hide_stopwatch);
+                start_therapy.setVisibility(View.VISIBLE);
+                start_therapy.setText(R.string.hide_stopwatch);
 
                 hide.setVisibility(View.INVISIBLE);
                 show.setVisibility(View.VISIBLE);
@@ -366,7 +401,7 @@ public class BeginnerMain extends AppCompatActivity {
 
         //display chronometer
         chronometer.setVisibility(View.VISIBLE);
-        start.setVisibility(View.INVISIBLE);
+        start_therapy.setVisibility(View.INVISIBLE);
         hide.setVisibility(View.VISIBLE);
         show.setVisibility(View.INVISIBLE);
 
@@ -618,8 +653,9 @@ public class BeginnerMain extends AppCompatActivity {
         if (!running){
             //update UI
             chronometer.setVisibility(View.VISIBLE);
+            start_therapy.setVisibility(View.INVISIBLE);
             start.setVisibility(View.INVISIBLE);
-//            pause.setVisibility(View.VISIBLE);
+            pause.setVisibility(View.VISIBLE);
 //            stop.setVisibility(View.VISIBLE);
 
             Toast.makeText(getApplicationContext(), "stopwatch started", Toast.LENGTH_SHORT).show();
@@ -631,13 +667,15 @@ public class BeginnerMain extends AppCompatActivity {
     }
 
     public void pauseStopwatch() {
+        System.out.println("inside pauseStopwatch");
         if (running){
+            System.out.println("inside if (running)");
             //update UI
             chronometer.setVisibility(View.INVISIBLE);
+            start_therapy.setVisibility(View.VISIBLE);
+            start_therapy.setText(getString(R.string.resume_stopwatch));
+            pause.setVisibility(View.INVISIBLE);
             start.setVisibility(View.VISIBLE);
-            start.setText(getString(R.string.resume_stopwatch));
-//            pause.setVisibility(View.INVISIBLE);
-//            stop.setVisibility(View.INVISIBLE);
 
             chronometer.stop();
             pauseOffset = SystemClock.elapsedRealtime() - chronometer.getBase();
@@ -647,10 +685,10 @@ public class BeginnerMain extends AppCompatActivity {
 
     public void stopStopwatch() {
         chronometer.setVisibility(View.INVISIBLE);
-        start.setVisibility(View.VISIBLE);
-        start.setText(R.string.start_stopwatch);
-//        pause.setVisibility(View.INVISIBLE);
-//        stop.setVisibility(View.INVISIBLE);
+        start_therapy.setVisibility(View.VISIBLE);
+        start_therapy.setText(R.string.start_stopwatch);
+        pause.setVisibility(View.INVISIBLE);
+        start.setVisibility(View.INVISIBLE);
 
         chronometer.setBase(SystemClock.elapsedRealtime());
         pauseOffset = 0;
@@ -659,8 +697,8 @@ public class BeginnerMain extends AppCompatActivity {
 
     public void hideStopwatch(View view) {
         chronometer.setVisibility(View.INVISIBLE);
-        start.setVisibility(View.VISIBLE);
-        start.setText(R.string.hide_stopwatch);
+        start_therapy.setVisibility(View.VISIBLE);
+        start_therapy.setText(R.string.hide_stopwatch);
 
         hide.setVisibility(View.INVISIBLE);
         show.setVisibility(View.VISIBLE);
@@ -668,7 +706,7 @@ public class BeginnerMain extends AppCompatActivity {
 
     public void showStopwatch(View view) {
         chronometer.setVisibility(View.VISIBLE);
-        start.setVisibility(View.INVISIBLE);
+        start_therapy.setVisibility(View.INVISIBLE);
 //        start.setText(R.string.hide_stopwatch);
 
         hide.setVisibility(View.VISIBLE);
