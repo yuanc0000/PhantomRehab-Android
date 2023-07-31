@@ -107,80 +107,112 @@
 
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+<!--    <ImageView-->
+<!--        android:id="@+id/image"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="200dp"-->
 
-        android:layout_below="@+id/stopwatch"
-        android:layout_centerHorizontal="true"
+<!--        android:layout_below="@+id/stopwatch"-->
+<!--        android:layout_centerHorizontal="true"-->
 
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/back1"
-        android:contentDescription="@string/random_hand"
-        />
+<!--        android:adjustViewBounds="true"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/back1"-->
+<!--        android:contentDescription="@string/random_hand"-->
+<!--        />-->
 
-    <LinearLayout
-        android:id="@+id/btn_select"
+<!--    <LinearLayout-->
+<!--        android:id="@+id/btn_select"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@+id/tabbar"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        >-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/btn_left"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="125dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center"-->
+
+<!--            android:fontFamily="@font/raleway_semibold"-->
+<!--            android:textSize="60sp"-->
+
+<!--            android:text="@string/left"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/white"-->
+
+<!--            android:background="@color/blue_left_btn"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/btn_right"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="125dp"-->
+<!--            android:gravity="center"-->
+
+<!--            android:fontFamily="@font/raleway_semibold"-->
+<!--            android:textSize="60sp"-->
+
+<!--            android:text="@string/right"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/white"-->
+
+<!--            android:background="@color/blue_tertiary"-->
+<!--            />-->
+
+<!--    </LinearLayout>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tabbar"
-        android:gravity="center_horizontal"
-        >
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back1"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintEnd_toStartOf="@id/end_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/horizontal_middle_guideline"
+            app:layout_constraintDimensionRatio="1.5"
+
+            />
 
         <TextView
             android:id="@+id/btn_left"
             android:layout_width="0dp"
-            android:layout_height="125dp"
-            android:layout_weight="1"
-            android:gravity="center"
-
-            android:fontFamily="@font/raleway_semibold"
-            android:textSize="60sp"
-
-            android:text="@string/left"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-
+            android:layout_height="0dp"
             android:background="@color/blue_left_btn"
-            />
+            android:gravity="center"
+            android:text="@string/left"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toStartOf="@id/middle_guideline"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintTop_toBottomOf="@id/image"
+            android:textSize="50sp"
+            android:fontFamily="@font/raleway_semibold"/>
 
         <TextView
             android:id="@+id/btn_right"
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="125dp"
-            android:gravity="center"
-
-            android:fontFamily="@font/raleway_semibold"
-            android:textSize="60sp"
-
-            android:text="@string/right"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-
+            android:layout_height="0dp"
             android:background="@color/blue_tertiary"
-            />
+            android:gravity="center"
+            android:text="@string/right"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/bottom_guideline"
+            app:layout_constraintEnd_toStartOf="@id/end_guideline"
+            app:layout_constraintStart_toStartOf="@id/middle_guideline"
+            app:layout_constraintTop_toBottomOf="@id/image"
+            android:textSize="50sp"
+            android:fontFamily="@font/raleway_semibold"/>
 
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_select"
-        android:layout_marginBottom="50dp"
-        >
-
-        <TextView
-            android:id="@+id/show_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/time_placeholder"
-            android:textSize="20sp"
-            android:fontFamily="@font/raleway_semibold"
-            android:layout_centerHorizontal="true"
-            />
 
         <TextView
             android:id="@+id/show_score"
@@ -189,9 +221,66 @@
             android:text="@string/score_placeholder"
             android:textSize="20sp"
             android:fontFamily="@font/raleway_semibold"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/show_time"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+
+            app:layout_constraintBottom_toTopOf="@id/image"
             />
+
+        <TextView
+            android:id="@+id/show_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_placeholder"
+            android:textSize="20sp"
+            android:fontFamily="@font/raleway_semibold"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintBottom_toTopOf="@id/show_score"
+            />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/middle_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottom_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.80" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontal_middle_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.98" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        >
 
         <ImageView
             android:id="@+id/volume"
@@ -215,6 +304,7 @@
             />
 
     </RelativeLayout>
+
 
     <RelativeLayout
         android:id="@+id/tabbar"
