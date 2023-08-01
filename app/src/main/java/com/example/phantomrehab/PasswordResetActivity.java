@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,11 +51,13 @@ public class PasswordResetActivity extends AppCompatActivity {
 
 
         //color management
-        TextView navbar = findViewById(R.id.navbar);
+        //TextView navbar = findViewById(R.id.navbar);
+        RelativeLayout navbar = findViewById(R.id.navbar);
 
 
         if (getColor() != getResources().getColor(R.color.blue_theme)){
             navbar.setBackgroundColor(getColor());
+            Submit.setBackgroundColor(getColor());
             //SignUp.setBackgroundTintList(ColorStateList.valueOf(getColor()));
         }
 
