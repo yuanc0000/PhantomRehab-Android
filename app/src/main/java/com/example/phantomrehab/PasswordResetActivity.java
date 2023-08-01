@@ -3,6 +3,8 @@ package com.example.phantomrehab;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -54,10 +56,33 @@ public class PasswordResetActivity extends AppCompatActivity {
         //TextView navbar = findViewById(R.id.navbar);
         RelativeLayout navbar = findViewById(R.id.navbar);
 
+//        if (getColor() == getResources().getColor(R.color.blue_theme)){
+//            MuteIcon.setBackgroundColor(getResources().getColor(R.color.blue_tertiary));
+//            PlayIcon.setBackgroundColor(getResources().getColor(R.color.blue_tertiary));
+//        }
 
         if (getColor() != getResources().getColor(R.color.blue_theme)){
             navbar.setBackgroundColor(getColor());
             Submit.setBackgroundColor(getColor());
+
+//            MuteIcon = findViewById(R.id.mute);
+//            PlayIcon = findViewById(R.id.volume);
+
+//            if (getColor() == getResources().getColor(R.color.purple_theme)){
+//                //MuteIcon.setBackgroundColor(getResources().getColor(R.color.purple_tertiary));
+//                MuteIcon.getDrawable().mutate().setColorFilter(new PorterDuffColorFilter(getResources().getColor(R.color.purple_tertiary), PorterDuff.Mode.SRC_IN));
+//                PlayIcon.getDrawable().mutate().setColorFilter(new PorterDuffColorFilter(getResources().getColor(R.color.purple_tertiary), PorterDuff.Mode.SRC_IN));
+//            }
+//            if (getColor() == getResources().getColor(R.color.teal_theme)){
+//                MuteIcon.setBackgroundColor(getResources().getColor(R.color.teal_tertiary));
+//                PlayIcon.setBackgroundColor(getResources().getColor(R.color.teal_tertiary));
+//            }
+//            if (getColor() == getResources().getColor(R.color.green_theme)){
+//                MuteIcon.setBackgroundColor(getResources().getColor(R.color.green_tertiary));
+//                PlayIcon.setBackgroundColor(getResources().getColor(R.color.green_tertiary));
+//            }
+
+            //left.setBackgroundColor(getResources().getColor(R.color.purple_theme));
             //SignUp.setBackgroundTintList(ColorStateList.valueOf(getColor()));
         }
 

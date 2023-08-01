@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 //        }
 
         //color management
-        TextView navbar = findViewById(R.id.navbar);
+        RelativeLayout navbar = findViewById(R.id.navbar);
         Login = (Button) findViewById(R.id.btn_login);
 
         if (getColor() != getResources().getColor(R.color.blue_theme)){

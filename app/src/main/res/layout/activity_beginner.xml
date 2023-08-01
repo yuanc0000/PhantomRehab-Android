@@ -136,7 +136,7 @@
             app:layout_constraintEnd_toStartOf="@id/middle_guideline"
             app:layout_constraintStart_toStartOf="@id/start_guideline"
             app:layout_constraintTop_toBottomOf="@id/image"
-            android:textSize="50sp"
+            android:textSize="35sp"
             android:fontFamily="@font/raleway_semibold"/>
 
         <TextView
@@ -151,7 +151,7 @@
             app:layout_constraintEnd_toStartOf="@id/end_guideline"
             app:layout_constraintStart_toStartOf="@id/middle_guideline"
             app:layout_constraintTop_toBottomOf="@id/image"
-            android:textSize="50sp"
+            android:textSize="35sp"
             android:fontFamily="@font/raleway_semibold"/>
 
 
