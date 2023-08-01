@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/navbar"
@@ -78,7 +87,6 @@
         android:textColorHint="@color/grey_input"
         android:textSize="22sp" />
 
-
     <EditText
         android:id="@+id/enter_pw"
         android:layout_width="300dp"
@@ -142,5 +150,9 @@
         android:textSize="20sp"
         />
 
-</LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+
+    </ScrollView>
+
 
