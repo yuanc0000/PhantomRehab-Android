@@ -38,6 +38,7 @@ public class PasswordResetActivity extends AppCompatActivity {
     private FirebaseAuth fAuth;
     private EditText Email;
     private Button Submit;
+    private TextView SignIn;
 
 
     //@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)//?
@@ -98,6 +99,25 @@ public class PasswordResetActivity extends AppCompatActivity {
                 }
             }
         });
+
+        ImageView backBtn = findViewById(R.id.back_btn);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PasswordResetActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        SignIn = findViewById(R.id.sign_in);
+        SignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
+
 
         //manage music
         MuteIcon = findViewById(R.id.mute);

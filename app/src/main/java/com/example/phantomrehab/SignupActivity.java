@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ import java.security.NoSuchAlgorithmException;
 public class SignupActivity extends AppCompatActivity {
 
     private EditText Username, Phone, Email, Password, RePassword;
+    private TextView SignIn;
     private Button SignUp;
     private ImageView PlayIcon, MuteIcon;
     private FirebaseAuth fAuth;
@@ -49,7 +51,7 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         //color management
-        TextView navbar = findViewById(R.id.navbar);
+        RelativeLayout navbar = findViewById(R.id.navbar);
         SignUp = findViewById(R.id.btn_signup);
 
         if (getColor() != getResources().getColor(R.color.blue_theme)){
@@ -78,6 +80,24 @@ public class SignupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 signup();
+            }
+        });
+
+        ImageView backBtn = findViewById(R.id.back_btn);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignupActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        SignIn = findViewById(R.id.sign_in);
+        SignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         });
 

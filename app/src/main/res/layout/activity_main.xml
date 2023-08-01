@@ -106,14 +106,11 @@
         android:layout_width="230dp"
         android:layout_height="59dp"
         android:layout_gravity="center"
-
         android:layout_marginBottom="3dp"
         android:background="@drawable/bg_button"
         android:fontFamily="@font/raleway_semibold"
-
         android:text="@string/login"
         android:textAllCaps="false"
-
         android:textColor="@color/black"
         android:textSize="24sp"
         app:backgroundTint="@color/blue_tertiary"
@@ -124,12 +121,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/raleway"
-        android:text="@string/sign_up_underline"
-        android:textColor="@color/blue_link"
-        android:textColorLink="@color/blue_link"
+        android:text="@string/sign_up"
+        android:textColor="@color/black"
         android:textSize="20sp"
         />
 
@@ -139,11 +135,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
 
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="@font/raleway"
         android:text="@string/forget_pw"
-        android:textColor="@color/blue_link"
-        android:textColorLink="@color/blue_link"
+        android:textColor="@color/black"
         android:textSize="20sp"
         />
 
