@@ -18,18 +18,66 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:orientation="vertical">
 
-            <TextView
+<!--            <TextView-->
+<!--                android:id="@+id/navbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="80dp"-->
+
+<!--                android:background="@color/blue_theme"-->
+<!--                android:fontFamily="@font/raleway_semibold"-->
+
+<!--                android:gravity="center"-->
+<!--                android:text="@string/app_name"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="27sp" />-->
+            <RelativeLayout
                 android:id="@+id/navbar"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-
                 android:background="@color/blue_theme"
-                android:fontFamily="@font/raleway_semibold"
+                android:layout_height="80dp">
 
-                android:gravity="center"
-                android:text="@string/app_name"
-                android:textColor="@color/black"
-                android:textSize="27sp" />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:text="@string/app_name"
+                    android:textColor="@color/black"
+
+                    android:textSize="27sp" />
+
+                <ImageView
+                    android:id="@+id/back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/back_btn" />
+
+                <ImageView
+                    android:id="@+id/volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/volume_float_mute"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/mute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/volume"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/volume_float" />
+
+            </RelativeLayout>
+
 
             <TextView
                 android:id="@+id/title_progress"
@@ -240,26 +288,26 @@
         android:layout_marginBottom="50dp"
         >
 
-        <ImageView
-            android:id="@+id/volume"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/volume_float_mute"
+<!--        <ImageView-->
+<!--            android:id="@+id/volume"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/volume_float_mute"-->
 
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="20dp"
-            android:visibility="invisible"
-            />
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:visibility="invisible"-->
+<!--            />-->
 
-        <ImageView
-            android:id="@+id/mute"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/volume_float"
+<!--        <ImageView-->
+<!--            android:id="@+id/mute"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/volume_float"-->
 
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="20dp"
-            />
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            />-->
 
     </RelativeLayout>
 
